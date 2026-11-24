@@ -3219,6 +3219,56 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Marina_Mabrey_Tempo.jpg"
    },
    "photo_relative": null
+  },
+  {
+   "rank": 88,
+   "player": "Jeanette Pohlen-Mavunga",
+   "player_slug": "jeanette-pohlen-mavunga",
+   "relative": "Stephanie Mavunga",
+   "relative_slug": "stephanie-mavunga",
+   "relation": "Sister-in-law",
+   "relation_type": "in-law",
+   "sport": "WNBA",
+   "known_for": "Forward taken 14th overall by the Indiana Fever in the 2018 WNBA draft. Indiana traded her to the Chicago Sky on Aug. 28, 2020, after 54 games with the Fever.",
+   "extra": "Jeanette married Stephanie's older brother, Julian Mavunga, on July 30, 2016. The Fever took Jeanette ninth overall in 2011, and she won the 2012 WNBA title with Indiana.",
+   "sources": [
+    {
+     "label": "Ohio State Athletics: Mitchell and Mavunga drafted by the Indiana Fever, April 12, 2018",
+     "url": "https://ohiostatebuckeyes.com/news/2018/4/12/mitchell-and-mavunga-drafted-by-the-wnbas-indiana-fever",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA.com bio: Jeanette Pohlen-Mavunga",
+     "url": "https://www.wnba.com/player/202656/jeanette-pohlen-mavunga/bio",
+     "kind": "primary"
+    },
+    {
+     "label": "Stanford Athletics: Pohlen named director of player development, June 17, 2022",
+     "url": "https://gostanford.com/news/2022/06/17/pohlen-named-director-of-player-development",
+     "kind": "primary"
+    },
+    {
+     "label": "Indiana Fever: Fever acquire Jantel Lavender, trade Stephanie Mavunga, Aug. 28, 2020 (archived)",
+     "url": "https://web.archive.org/web/20211001105430/https://fever.wnba.com/news/fever-acquire-jantel-lavender-trade-stephanie-mavunga/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-24",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/players/jeanette-pohlen-mavunga/portrait.webp",
+    "author": "Shotgun Spratling/Neon Tommy",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jeanette_Pohlen.jpg"
+   },
+   "photo_relative": {
+    "file": "/images/players/stephanie-mavunga/portrait.webp",
+    "author": "Zafer",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Stephanie_Mavunga_1_Valencia_Basket_(women)_EuroLeague_Women_20250108_(2).jpg"
+   }
   }
  ]
 }

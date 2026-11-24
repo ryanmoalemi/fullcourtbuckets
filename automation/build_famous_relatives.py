@@ -77,7 +77,7 @@ DICTIONARY = (
     ('team_2026', 'The player\'s team in FCB\'s 2026 player data. Blank when she is not on a 2026 roster.'),
     ('relative', 'The famous relative.'),
     ('relation', 'How the relative is related to the player, in the player\'s terms (her father, her cousin).'),
-    ('relation_type', 'One of sibling, parent, grandparent, uncle/aunt, cousin, godfamily or spouse (current or former).'),
+    ('relation_type', 'One of sibling, parent, grandparent, uncle/aunt, cousin, godfamily, spouse (current or former) or in-law.'),
     ('sport', 'Where the relative made their name.'),
     ('known_for', 'The verified one-line reason the relative is notable.'),
     ('source_urls', 'Every source for the row, separated by a space.'),
@@ -241,7 +241,7 @@ def stats(entries: list[dict]) -> dict:
 RELATION_LABEL = OrderedDict((
     ('sibling', 'Siblings'), ('parent', 'Parents'), ('grandparent', 'Grandparents'),
     ('uncle/aunt', 'Uncles and aunts'), ('cousin', 'Cousins'), ('godfamily', 'Godfamily'),
-    ('spouse', 'Spouses'),
+    ('spouse', 'Spouses'), ('in-law', 'In-laws'),
 ))
 
 
@@ -616,7 +616,7 @@ def body(doc: dict, entries: list[dict], s: dict) -> str:
     parts.append('<ul>'
         f'<li><strong>NBA is the most common link:</strong> {sport["NBA"]} of {total} relatives ({pct(sport["NBA"], total)}).</li>'
         f'<li><strong>Siblings lead the relations:</strong> {rel["sibling"]} siblings and {rel["parent"]} parents.</li>'
-        f'<li><strong>WNBA families:</strong> {s["wnba_families"]} relatives also played in the WNBA, so the league has its own families: the Sabally, Ogwumike, Samuelson, Jones and Paris sisters, Bonner and McCall, and Pamela McGee and her daughter.</li>'
+        f'<li><strong>WNBA families:</strong> {s["wnba_families"]} relatives also played in the WNBA, so the league has its own families: the Sabally, Ogwumike, Samuelson, Jones and Paris sisters, Bonner and McCall, Pamela McGee and her daughter, and Pohlen-Mavunga and Mavunga, who are sisters-in-law.</li>'
         + (f'<li><strong>Spouses:</strong> {s["spouses"]} spouses are notable in their own right, {s["wnba_spouses"]} of them WNBA players. '
            'Only spouses with a public career and an official team, league or school record of the marriage are listed. Private spouses are left out.</li>' if s.get('spouses') else '')
         + f'<li><strong>Primary records:</strong> {s["primary_rows"]} of {total} rows rest only on official records. The other {s["with_report"]} also cite a news report, labeled as one.</li>'
