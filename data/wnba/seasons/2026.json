@@ -8949,7 +8949,7 @@
       "conference": "Eastern Conference"
     },
     "games_played": 4,
-    "min": 1.0,
+    "min": 0.75,
     "fgm": 0.0,
     "fga": 0.0,
     "fg_pct": null,
